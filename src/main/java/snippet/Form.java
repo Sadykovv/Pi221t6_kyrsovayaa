@@ -1,17 +1,17 @@
 package snippet;
 
-import java.awt.*;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
+
+
 
 public class Form  {
+	
+
+	
 	Raschet ras = new Raschet();
 	int X = 30;
 	int Z = 60;
@@ -43,25 +43,28 @@ public class Form  {
 			ActionListener actionListener = new Event(); //создаем слушатель
 			exit.addActionListener(actionListener);
 			
-			   BufferedImage fileDir = ImageIO.read(new URL ("https://wdfiles.ru/plugins/imageviewer/site/direct.php?s=590294&/win_01.jpg"));
-		        JLabel win1 = new JLabel();// Отображение текста или изображения
-		        win1.setIcon(new ImageIcon(fileDir.getScaledInstance(59, 75, fileDir.SCALE_DEFAULT)));
-		        win1.setBounds(60,160,200,200);
+
+		 
+			
+			 JLabel win1 = new JLabel();
+			 ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_01.jpg")));
+			 win1.setIcon(icon);
+			 win1.setBounds(60,160,200,200);
+			
+			 JLabel win2 = new JLabel();
+			 ImageIcon icon2 = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_02.jpg")));
+			 win2.setIcon(icon2);
+		     win2.setBounds(220,160,200,200);
 		        
-		        BufferedImage fileDir2 = ImageIO.read(new URL ("https://wdfiles.ru/plugins/imageviewer/site/direct.php?s=340626&/win_02.jpg"));
-		        JLabel win2 = new JLabel();// Отображение текста или изображения
-		        win2.setIcon(new ImageIcon(fileDir2.getScaledInstance(78, 77, fileDir2.SCALE_DEFAULT)));
-		        win2.setBounds(220,160,200,200);
+		     JLabel win3 = new JLabel();
+		     ImageIcon icon3 = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_03.jpg")));
+			 win3.setIcon(icon3);
+		     win3.setBounds(60,310,200,200);
 		        
-		        BufferedImage fileDir3 = ImageIO.read(new URL ("https://wdfiles.ru/plugins/imageviewer/site/direct.php?s=78d9ca&/win_03.jpg"));
-		        JLabel win3 = new JLabel();// Отображение текста или изображения
-		        win3.setIcon(new ImageIcon(fileDir3.getScaledInstance(78, 77, fileDir3.SCALE_DEFAULT)));
-		        win3.setBounds(60,310,200,200);
-		        
-		        BufferedImage fileDir4 = ImageIO.read(new URL ("https://wdfiles.ru/plugins/imageviewer/site/direct.php?s=5785db&/win_04.jpg"));
-		        JLabel win4 = new JLabel();// Отображение текста или изображения
-		        win4.setIcon(new ImageIcon(fileDir4.getScaledInstance(116, 87, fileDir4.SCALE_DEFAULT)));
-		        win4.setBounds(220,310,200,200);
+		     JLabel win4 = new JLabel();
+			 ImageIcon icon4 = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_04.jpg")));
+			 win4.setIcon(icon4);
+		     win4.setBounds(220,310,200,200);
      
 		main_panel.add(win1);
 		main_panel.add(win2);
@@ -72,6 +75,7 @@ public class Form  {
 		win3.setVisible(false);
 		win4.setVisible(false);
 
+		
 		JLabel laba_info = new JLabel("Тип уборки:"); // Отображение текста или изображения
 		laba_info.setBounds(40,45,150,30);
 		
@@ -79,7 +83,7 @@ public class Form  {
 		JTextField input = new JTextField("введите число (м.кв)");
 		input.setBounds(150, 83, 130, 23);
 		main_panel.add(input);		
-		JLabel Slabel = new JLabel("Площадь уборки:"); // Отображение текста или изображения
+		JLabel Slabel = new JLabel("Площадь уборк:"); // Отображение текста или изображения
 		Slabel.setBounds(40,80,150,30);
 		main_panel.add(Slabel);
 		JLabel window= new JLabel("Мытье окон:"); // Отображение текста или изображения
@@ -108,7 +112,7 @@ public class Form  {
 		JTextField inputW1 = new JTextField("0");
 		inputW1.setBounds(60, 195, 30, 23);
 		inputW1.setVisible(false);
-		main_panel.add(inputW1);
+		main_panel.add(inputW1);;
 		JTextField inputW2 = new JTextField("0");
 		inputW2.setBounds(220, 195, 30, 23);
 		inputW2.setVisible(false);
@@ -163,7 +167,13 @@ public class Form  {
 		po1.setVisible(false);
 		po2.setVisible(false);
 		input_san.setVisible(false);
-		main_panel.add(win1);
+	 main_panel.add(win1);
+	 
+	// JButton button_create = new JButton("Create PDF"); // добавляем кнопку
+	//	button_create.setBounds(400,200,100,40);
+	//	ActionListener actionCreate = new snippet.ListenerCreate(); //создаем слушатель для кнопки PDF
+	//	button_create.addActionListener(actionCreate); // добавляем слушатель к кнопке
+	//	main_panel.add(button_create);
 
 		String[] type = {"генеральная", "после ремонта","ежедневная"};
 		JComboBox box = new JComboBox(type);
@@ -190,7 +200,9 @@ public class Form  {
 					win1.setVisible(true);
 					win2.setVisible(true);
 					win3.setVisible(true);
-					win4.setVisible(true);
+					win4.setVisible(true); 
+					
+					
 					window1.setVisible(true);
 					window2.setVisible(true);
 					window3.setVisible(true);
@@ -285,11 +297,9 @@ public class Form  {
          		rasch.raschet();
          	}
 		 }
-		    	});
+	});	
 		
 	}
-
-
 	public static void main (String[] args) throws MalformedURLException, IOException {
 		Form start = new Form();
 	}
