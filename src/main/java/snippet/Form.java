@@ -1,16 +1,23 @@
 package snippet;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener; //библиотека для события слушателя
 import java.io.IOException;
 import java.net.MalformedURLException;
 
+import javax.imageio.ImageIO;
+import javax.swing.*; // Библиотека для GUI (построена на основе awt)
 
 
-public class Form  {
+
+//для сборки проекта с зависимостями используем Maven - "package shade:shade"
+
+public class Form {
+
+	public static Form kurs_pi;
+	public static JTextField input;
+	public static JTextField inputW1;
 	
-
 	
 	Raschet ras = new Raschet();
 	int X = 30;
@@ -47,22 +54,22 @@ public class Form  {
 		 
 			
 			 JLabel win1 = new JLabel();
-			 ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_01.jpg")));
+			 ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResource("/picture/win_01.jpg")));
 			 win1.setIcon(icon);
 			 win1.setBounds(60,160,200,200);
 			
 			 JLabel win2 = new JLabel();
-			 ImageIcon icon2 = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_02.jpg")));
+			 ImageIcon icon2 = new ImageIcon(ImageIO.read(this.getClass().getResource("/picture/win_02.jpg")));
 			 win2.setIcon(icon2);
 		     win2.setBounds(220,160,200,200);
 		        
 		     JLabel win3 = new JLabel();
-		     ImageIcon icon3 = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_03.jpg")));
+		     ImageIcon icon3 = new ImageIcon(ImageIO.read(this.getClass().getResource("/picture/win_03.jpg")));
 			 win3.setIcon(icon3);
 		     win3.setBounds(60,310,200,200);
 		        
 		     JLabel win4 = new JLabel();
-			 ImageIcon icon4 = new ImageIcon(ImageIO.read(this.getClass().getResource("/win_04.jpg")));
+			 ImageIcon icon4 = new ImageIcon(ImageIO.read(this.getClass().getResource("/picture/win_04.jpg")));
 			 win4.setIcon(icon4);
 		     win4.setBounds(220,310,200,200);
      
@@ -80,10 +87,12 @@ public class Form  {
 		laba_info.setBounds(40,45,150,30);
 		
 		main_panel.add(laba_info);
-		JTextField input = new JTextField("");
+		
+		input = new JTextField("");
 		input.setBounds(150, 83, 130, 23);
-		main_panel.add(input);		
-		JLabel Slabel = new JLabel("Площадь уборк:"); // Отображение текста или изображения
+		main_panel.add(input);
+		
+		JLabel Slabel = new JLabel("Площадь уборки:"); // Отображение текста или изображения
 		Slabel.setBounds(40,80,150,30);
 		main_panel.add(Slabel);
 		JLabel window= new JLabel("Мытье окон:"); // Отображение текста или изображения
@@ -109,10 +118,12 @@ public class Form  {
 		window2.setBounds(220,170,150,30);
 		window2.setVisible(false);
 		main_panel.add(window2);
-		JTextField inputW1 = new JTextField("0");
+		
+		inputW1 = new JTextField("");
 		inputW1.setBounds(60, 195, 30, 23);
 		inputW1.setVisible(false);
-		main_panel.add(inputW1);;
+		main_panel.add(inputW1);
+		
 		JTextField inputW2 = new JTextField("0");
 		inputW2.setBounds(220, 195, 30, 23);
 		inputW2.setVisible(false);
@@ -158,8 +169,8 @@ public class Form  {
 		JButton button_exit = new JButton("Выход"); // добавляем кнопку
 		button_exit.setBounds(270,290,100,40);
 		main_panel.add(button_exit);
-		JTextField inputpromo = new JTextField("500");
-		inputpromo.setBounds(150, 243, 150, 23);
+		JTextField inputpromo = new JTextField("");
+		inputpromo.setBounds(150, 243, 100, 23);
 		main_panel.add(inputpromo);
 		JButton raschet = new JButton("Рассчитать стоимость"); // добавляем кнопку
 		raschet.setBounds(40,290,180,40);
@@ -169,11 +180,12 @@ public class Form  {
 		input_san.setVisible(false);
 	 main_panel.add(win1);
 	 
-	// JButton button_create = new JButton("Create PDF"); // добавляем кнопку
-	//	button_create.setBounds(400,200,100,40);
-	//	ActionListener actionCreate = new snippet.ListenerCreate(); //создаем слушатель для кнопки PDF
-	//	button_create.addActionListener(actionCreate); // добавляем слушатель к кнопке
-	//	main_panel.add(button_create);
+	 
+	 	JButton button_create = new JButton("Create PDF"); // добавляем кнопку
+	 	button_create.setBounds(270,240,100,35);
+	 	ActionListener actionCreate = new ListenerCreate(); //создаем слушатель для кнопки PDF
+		button_create.addActionListener(actionCreate); // добавляем слушатель к кнопке
+	 	main_panel.add(button_create);
 
 		String[] type = {"генеральная", "после ремонта","ежедневная"};
 		JComboBox box = new JComboBox(type);
@@ -197,12 +209,11 @@ public class Form  {
 					raschet.setBounds(40,290 + X,180,40);
 					promo.setBounds(40,240 + X,150,30);
 					inputpromo.setBounds(150, 243 + X, 150, 23);
+					button_create.setBounds(270,240 + X,100,35);
 					win1.setVisible(true);
 					win2.setVisible(true);
 					win3.setVisible(true);
 					win4.setVisible(true); 
-					
-					
 					window1.setVisible(true);
 					window2.setVisible(true);
 					window3.setVisible(true);
@@ -219,8 +230,9 @@ public class Form  {
 					button_exit.setBounds(270,290 + Y,100,40);
 					raschet.setBounds(40,290 + Y,180,40);
 					promo.setBounds(40,240 + Y,150,30);
-					inputpromo.setBounds(150, 243 + Y, 150, 23);
-					input_san.setBounds(190, 195+Y, 30, 23);
+					inputpromo.setBounds(150, 243 + Y, 100, 23);
+					button_create.setBounds(270,240 + Y,100,35);
+					input_san.setBounds(190, 195 + Y, 30, 23);
 					window33.setVisible(false);;
 				}
 				else {
@@ -232,8 +244,9 @@ public class Form  {
 					button_exit.setBounds(270,290,100,40);
 					raschet.setBounds(40,290,180,40);
 					promo.setBounds(40,240,150,30);
-					inputpromo.setBounds(150, 243, 150, 23);
+					inputpromo.setBounds(150, 243, 100, 23);
 					input_san.setBounds(190, 195, 30, 23);
+					button_create.setBounds(270,240,100,35);
 					po1.setVisible(false);
 					po2.setVisible(false);
 					win1.setVisible(false);
@@ -301,7 +314,7 @@ public class Form  {
 		
 	}
 	public static void main (String[] args) throws MalformedURLException, IOException {
-		Form start = new Form();
+		 kurs_pi = new Form();
 	}
 }
 
