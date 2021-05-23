@@ -80,7 +80,7 @@ public class Form  {
 		laba_info.setBounds(40,45,150,30);
 		
 		main_panel.add(laba_info);
-		JTextField input = new JTextField("введите число (м.кв)");
+		JTextField input = new JTextField("");
 		input.setBounds(150, 83, 130, 23);
 		main_panel.add(input);		
 		JLabel Slabel = new JLabel("Площадь уборк:"); // Отображение текста или изображения
