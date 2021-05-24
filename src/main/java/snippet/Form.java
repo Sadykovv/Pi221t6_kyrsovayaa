@@ -23,9 +23,15 @@ public class Form {
 	public static Form kurs_pi;
 	public static JTextField input;
 	public static JTextField inputW1;
-	
+	public static JTextField inputW2;
+	public static JTextField inputW3;
+	public static JTextField inputW4;
 	private final JTextField log = new JTextField();
 	private static JTextField pas = new JTextField();
+	
+	public static JTextField inputpromo2 =  new JTextField();
+	public static JTextField sk_field =  new JTextField();
+			
 	private JPanel main_panel = new JPanel(); 
 	private JPanel main_panel2 = new JPanel(); 
 	public static String d;
@@ -62,7 +68,7 @@ public class Form {
 		 win4.setIcon(icon4);
 	     win4.setBounds(220,310,200,200);
 	     
-	JFrame1.setTitle ("Авторизация"); 	//СОЗДАНИЕ ФОРМЫ АВТОРИЗАЦИИ
+	JFrame1.setTitle ("Авторизация "); 	//СОЗДАНИЕ ФОРМЫ АВТОРИЗАЦИИ
 	JFrame1.setBounds(400,200,400,350);
 	JFrame1.setResizable(false); // фиксированный размер окна
 	
@@ -110,16 +116,16 @@ public class Form {
 																													//Создание формы калькулятора для обычных пользователей
 					main_GUI.setTitle ("Калькулятор клининговых услуг");										
 					main_GUI.setBounds(600,600,400,400);
-					main_GUI.setResizable(false); // фиксированный размер окна
+					main_GUI.setResizable(false);																	// фиксированный размер окна
 					
 					main_GUI.add(main_panel);
 					main_panel.setLayout(null); 
 				    JFrame1.dispose();    	
-				    JPanel main_panel = new JPanel(); // Панель - используется для организации компонентов в окне
+				    JPanel main_panel = new JPanel(); 																// Панель - используется для организации компонентов в окне
 					main_panel.setLayout(null);
 					main_GUI.add(main_panel);
 					main_GUI.setVisible(true);
-					main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// закрытие окна JFrame и процесса Java
+					main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);										// закрытие окна JFrame и процесса Java
 					
 
 					String a = "Меню";
@@ -150,7 +156,7 @@ public class Form {
 					win4.setVisible(false);
 
 					
-					JLabel laba_info = new JLabel("Тип уборки:"); // Отображение текста или изображения
+					JLabel laba_info = new JLabel("Тип уборки :"); // Отображение текста или изображения
 					laba_info.setBounds(40,45,150,30);
 					
 					main_panel.add(laba_info);
@@ -160,10 +166,10 @@ public class Form {
 					main_panel.add(input);
 					
 					
-					JLabel Slabel = new JLabel("Площадь уборки:"); // Отображение текста или изображения
+					JLabel Slabel = new JLabel("Площадь уборки :"); // Отображение текста или изображения
 					Slabel.setBounds(40,80,150,30);
 					main_panel.add(Slabel);
-					JLabel window= new JLabel("Мытье окон:"); // Отображение текста или изображения
+					JLabel window= new JLabel("Мытье окон :"); // Отображение текста или изображения
 					window.setBounds(40,110,150,30);
 					main_panel.add(window);
 					JCheckBox galochka = new JCheckBox();
@@ -192,7 +198,7 @@ public class Form {
 					inputW1.setVisible(false);
 					main_panel.add(inputW1);
 					
-					JTextField inputW2 = new JTextField("0");
+					inputW2 = new JTextField("");
 					inputW2.setBounds(220, 195, 30, 23);
 					inputW2.setVisible(false);
 					main_panel.add(inputW2);
@@ -204,11 +210,11 @@ public class Form {
 					window4.setBounds(220,320,150,30);
 					window4.setVisible(false);
 					main_panel.add(window4);
-					JTextField inputW3 = new JTextField("0");
+					inputW3 = new JTextField("");
 					inputW3.setBounds(60, 345, 30, 23);
 					inputW3.setVisible(false);
 					main_panel.add(inputW3);
-					JTextField inputW4 = new JTextField("0");
+					inputW4 = new JTextField("");
 					inputW4.setVisible(false);
 					inputW4.setBounds(220, 345, 30, 23);
 					main_panel.add(inputW4);
@@ -390,11 +396,35 @@ public class Form {
 					
 				    JFrame1.dispose();    
 				    JButton button_exit = new JButton("Выход"); // добавляем кнопку
-					button_exit.setBounds(270,200,100,40);
+					button_exit.setBounds(270,240,100,40);
 					main_panel2.add(button_exit);
 					main_GUI2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					ActionListener actionListener1 = new Event(); //создаем слушатель
 			    	button_exit.addActionListener(actionListener1); // добавляем слушатель к кнопке
+			    	
+					JLabel promo2 = new JLabel("Новый промокод:"); // Отображение текста или изображения	
+					promo2.setBounds(40,200,150,30);			
+					main_panel2.add(promo2);				
+					
+					inputpromo2 = new JTextField("");			// 	ПОЛЕ ВВОДА НОВОГО ПРОМОКОДА	
+					inputpromo2.setBounds(150, 203, 100, 23);
+					main_panel2.add(inputpromo2);	
+					
+
+					JLabel sk = new JLabel("Сумма скидки:"); // Отображение текста или изображения	
+					sk.setBounds(40,240,150,30);			
+					main_panel2.add(sk);				
+					
+					sk_field = new JTextField("");			// 	ПОЛЕ ВВОДА НОВОГО ПРОМОКОДА	
+					sk_field.setBounds(150, 243, 100, 23);
+					main_panel2.add(sk_field);	
+					
+					 JButton ok = new JButton("Применить"); // добавляем кнопку
+					 ok.setBounds(270,200,100,40);
+					 main_panel2.add(ok);
+					 
+					 ActionListener actionListener_ok = new Apply(); //создаем слушатель
+				    	button_exit.addActionListener(actionListener_ok); // добавляем слушатель к кнопке
 				}		
 			}
 			
@@ -422,11 +452,12 @@ public class Form {
        JLabel laba_pass = new JLabel("Введите пароль");
        laba_pass.setBounds(100,130,300,30);
        panel.add(laba_pass);
-         // создание текстового поля
        pas.setBounds(100,155,200,30); //  параметры текстового поля ( его положение на панели относительно x,y;ширину, длину)
        panel.add(pas); // Добавление текстового поля на панель
 	
    }	
+								
+
 	public static void main(String[] args) throws IOException   { 
 		
 		kurs_pi = new Form();

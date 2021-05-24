@@ -1,12 +1,22 @@
 package snippet;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
 public abstract class ForRaschet {
-
+	
+	public static String promocode;
+	public static String skidka_on_promo;
+	public static File files;
+	public static Scanner scan;
+	
   private String square;
   private String w1;
   private String cupon;
@@ -30,9 +40,27 @@ public abstract class ForRaschet {
   protected int x4;
   protected int skidka;
 
-  public void raschet() {
+  public void raschet()   {
+	  
+	  files = new File("promo.txt");			//ЧТЕНИЕ ФАЙЛА С ЛОГИНОМ И ПАРОЛЕМ
+	     scan = null;
+		try {
+			scan = new Scanner(new FileInputStream(files));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+			  promocode = scan.next();//Логин пользователя
+			  skidka_on_promo = scan.next();//Пароль пользователя
+			  
+	        scan.close();
+	        
+	    
+
+	        
 	  Map<String, Integer> myMap = new HashMap<String, Integer>() {{ //купончики
-		  put("500", 500);
+		  put(promocode, Integer.parseInt(skidka_on_promo));
 		  put("1000", 1000);
 		  put("Ananas",1000);
 		  }};		  
