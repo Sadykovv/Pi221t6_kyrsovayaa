@@ -68,7 +68,7 @@ public class Form {
 		 win4.setIcon(icon4);
 	     win4.setBounds(220,310,200,200);
 	     
-	JFrame1.setTitle ("Авторизация "); 	//СОЗДАНИЕ ФОРМЫ АВТОРИЗАЦИИ
+	JFrame1.setTitle ("Авторизация"); 	//СОЗДАНИЕ ФОРМЫ АВТОРИЗАЦИИ
 	JFrame1.setBounds(400,200,400,350);
 	JFrame1.setResizable(false); // фиксированный размер окна
 	
@@ -156,7 +156,7 @@ public class Form {
 					win4.setVisible(false);
 
 					
-					JLabel laba_info = new JLabel("Тип уборки :"); // Отображение текста или изображения
+					JLabel laba_info = new JLabel("Тип уборки:"); // Отображение текста или изображения
 					laba_info.setBounds(40,45,150,30);
 					
 					main_panel.add(laba_info);
@@ -166,7 +166,7 @@ public class Form {
 					main_panel.add(input);
 					
 					
-					JLabel Slabel = new JLabel("Площадь уборки :"); // Отображение текста или изображения
+					JLabel Slabel = new JLabel("Площадь уборки:"); // Отображение текста или изображения
 					Slabel.setBounds(40,80,150,30);
 					main_panel.add(Slabel);
 					JLabel window= new JLabel("Мытье окон :"); // Отображение текста или изображения
