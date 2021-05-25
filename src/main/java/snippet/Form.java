@@ -84,7 +84,7 @@ public class Form {
         scan.close();
    
        
-	JButton but_login = new JButton("Enter");								//������ �����
+	JButton but_login = new JButton("Enter ");								//������ �����
 	but_login.setBounds(250,235,105,30);
 	but_login.addActionListener(new ActionListener() {						//���������� ��������� � ������ �����	
 		
