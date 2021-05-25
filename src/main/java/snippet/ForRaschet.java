@@ -29,7 +29,7 @@ public abstract class ForRaschet {
   
   protected double san;
   protected double him;
-  protected double itog;
+  public static double itog;
   protected double typ;
   protected double ty;
   
@@ -76,7 +76,7 @@ public abstract class ForRaschet {
       x3 = Integer.parseInt(w3);
       x4 = Integer.parseInt(w4);// Перевод вводимого срока в число
      } catch (NumberFormatException e1) {
-       JOptionPane.showMessageDialog(null,"Проверьте ввод данных","Ошибка",JOptionPane.ERROR_MESSAGE); // Окно вывода ошибки при неверно введённых данных
+       JOptionPane.showMessageDialog(null,"Проверьте ввод данных","Error",JOptionPane.ERROR_MESSAGE); // Окно вывода ошибки при неверно введённых данных
        return;
        }  
      typ = 1000;
@@ -91,7 +91,7 @@ public abstract class ForRaschet {
        
    	itog = ty + sq * 40 +(x1 + x2 + x3 +x4) * 399 + him + san - skidka;
        
-     JOptionPane.showMessageDialog(null,"Итоговоя стоимость: " + itog); //
+     JOptionPane.showMessageDialog(null,"Total: " + itog); //
      }
 
 

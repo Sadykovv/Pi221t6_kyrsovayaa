@@ -1,7 +1,7 @@
 package snippet;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener; //библиотека для события слушателя
+import java.awt.event.ActionListener; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,12 +11,12 @@ import java.net.MalformedURLException;
 import java.util.Scanner;
 
 import javax.imageio.ImageIO;
-import javax.swing.*; // Библиотека для GUI (построена на основе awt)
+import javax.swing.*; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ GUI (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ awt)
 
 
 
 
-//для сборки проекта с зависимостями используем Maven - "package shade:shade"
+//пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Maven - "package shade:shade"
 
 public class Form {
 
@@ -38,9 +38,9 @@ public class Form {
 	public static String q;
 	public static String h;
 	public static String j;
-	JFrame JFrame1 = new JFrame("calculator"); // создание графического окна
-	JFrame main_GUI = new JFrame("Калькулятор");
-	JFrame main_GUI2 = new JFrame("Калькулятор");
+	JFrame JFrame1 = new JFrame("calculator  "); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	JFrame main_GUI = new JFrame("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+	JFrame main_GUI2 = new JFrame("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	Raschet ras = new Raschet();
 	int X = 30;
 	int Z = 60;
@@ -68,40 +68,40 @@ public class Form {
 		 win4.setIcon(icon4);
 	     win4.setBounds(220,310,200,200);
 	     
-	JFrame1.setTitle ("Авторизация"); 	//СОЗДАНИЕ ФОРМЫ АВТОРИЗАЦИИ
+	JFrame1.setTitle ("Autorization"); 	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	JFrame1.setBounds(400,200,400,350);
-	JFrame1.setResizable(false); // фиксированный размер окна
+	JFrame1.setResizable(false); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 	
-	JPanel auth = new JPanel(); // Панель - используется для организации компонентов в окне
+	JPanel auth = new JPanel(); // пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
 	auth.setLayout(null); 
-	InputStream is = getClass().getResourceAsStream("/1.txt");				//ЧТЕНИЕ ФАЙЛА С ЛОГИНОМ И ПАРОЛЕМ
+	InputStream is = getClass().getResourceAsStream("/1.txt");				//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	Scanner scan = new Scanner(is);
 	BufferedReader reader = new BufferedReader(new InputStreamReader(is));	
-		  d=scan.next();//Логин пользователя
-          q=scan.next();//Пароль пользователя
-          h=scan.next();//Логин администратора
-          j=scan.next();//Пароль администратора
+		  d=scan.next();//пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+          q=scan.next();//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+          h=scan.next();//пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+          j=scan.next();//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         scan.close();
    
        
-	JButton but_login = new JButton("Войти");								//КНОПКА ВХОДА
+	JButton but_login = new JButton("Enter");								//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	but_login.setBounds(250,235,105,30);
-	but_login.addActionListener(new ActionListener() {						//ДОБАВЛЕНИЕ СЛУШАТЕЛЯ К КНОПКЕ ВХОДА	
+	but_login.addActionListener(new ActionListener() {						//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ	
 		
 		
-		public void actionPerformed(ActionEvent e) {									//НАПИСАНИЕ СЛУШАТЕЛЯ ДЛЯ ВХОДА
+		public void actionPerformed(ActionEvent e) {									//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 			if(log.getText().equals(d) && pas.getText().equals(q)) {
 				
-				JOptionPane.showMessageDialog(null, "Вы успешно вошли", "Добро пожаловать, вы вошли как обычный пользователь", 1);
+				JOptionPane.showMessageDialog(null, "Welcome", "welcome", 1);
 			but_loginActionPerformed(e);
 			}
 			else if (log.getText().equals(h)&&pas.getText().equals(j)) {
-					JOptionPane.showMessageDialog(null, "Вы успешно вошли", "Добро пожаловать, вы вошли как администратор", 1);
+					JOptionPane.showMessageDialog(null, "Welcome", "welcome", 1);
 					
 					but_loginActionPerformed(e);
 			}
 			else {
-            	JOptionPane.showMessageDialog(null, "Пожалуйста, проверьте правильность написания логина и пароля", "Не удается войти", 0);
+            	JOptionPane.showMessageDialog(null, "Error", "Check youre login or password", 0);
             	pas.setText("");
             	log.setText("");
             
@@ -112,28 +112,28 @@ public class Form {
 			private void but_loginActionPerformed(ActionEvent e) {
 				
 			       
-				if(log.getText().equals(d) && pas.getText().equals(q)) {       										//условие для входа простого пользователя
-																													//Создание формы калькулятора для обычных пользователей
-					main_GUI.setTitle ("Калькулятор клининговых услуг");										
+				if(log.getText().equals(d) && pas.getText().equals(q)) {       										//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+																													//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+					main_GUI.setTitle ("calcilator of cleaning");										
 					main_GUI.setBounds(600,600,400,400);
-					main_GUI.setResizable(false);																	// фиксированный размер окна
+					main_GUI.setResizable(false);																	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 					
 					main_GUI.add(main_panel);
 					main_panel.setLayout(null); 
 				    JFrame1.dispose();    	
-				    JPanel main_panel = new JPanel(); 																// Панель - используется для организации компонентов в окне
+				    JPanel main_panel = new JPanel(); 																// пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
 					main_panel.setLayout(null);
 					main_GUI.add(main_panel);
 					main_GUI.setVisible(true);
-					main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);										// закрытие окна JFrame и процесса Java
+					main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);										// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ JFrame пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Java
 					
 
-					String a = "Меню";
+					String a = "пїЅпїЅпїЅпїЅ";
 						JMenuBar menubar = new JMenuBar();
-						JMenu menu = new JMenu("Меню");
+						JMenu menu = new JMenu("Menu");
 						menubar.add(menu);
-						JMenuItem inform = new JMenuItem("Информация о разработчиках");
-						JMenuItem exit = new JMenuItem("Выход");
+						JMenuItem inform = new JMenuItem("Information about developers");
+						JMenuItem exit = new JMenuItem("Exit");
 						menu.add(inform);
 						menu.add(exit);
 						main_GUI.setJMenuBar(menubar);
@@ -141,7 +141,7 @@ public class Form {
 						inform.addActionListener(inf_listener);	
 						
 
-						ActionListener actionListener = new Event(); //создаем слушатель
+						ActionListener actionListener = new Event(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 						exit.addActionListener(actionListener);
 						
 						
@@ -156,7 +156,7 @@ public class Form {
 					win4.setVisible(false);
 
 					
-					JLabel laba_info = new JLabel("Тип уборки:"); // Отображение текста или изображения
+					JLabel laba_info = new JLabel("Type:"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					laba_info.setBounds(40,45,150,30);
 					
 					main_panel.add(laba_info);
@@ -166,14 +166,14 @@ public class Form {
 					main_panel.add(input);
 					
 					
-					JLabel Slabel = new JLabel("Площадь уборки:"); // Отображение текста или изображения
+					JLabel Slabel = new JLabel("Square:"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					Slabel.setBounds(40,80,150,30);
 					main_panel.add(Slabel);
-					JLabel window= new JLabel("Мытье окон :"); // Отображение текста или изображения
+					JLabel window= new JLabel("Cleaning window:"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					window.setBounds(40,110,150,30);
 					main_panel.add(window);
 					JCheckBox galochka = new JCheckBox();
-					galochka.setBounds(120, 115, 20, 20);
+					galochka.setBounds(165, 115, 20, 20);
 					main_panel.add(galochka);
 					JRadioButton po1 = new JRadioButton("");
 					po1.setBounds(115, 145, 20, 20);
@@ -184,11 +184,11 @@ public class Form {
 					ButtonGroup group = new ButtonGroup();
 					group.add(po1);
 					group.add(po2); 
-					JLabel window1 = new JLabel("Одностворчатое окно"); // Отображение текста или изображения
+					JLabel window1 = new JLabel("One window"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					window1.setBounds(60,170,130,30);
 					window1.setVisible(false);
 					main_panel.add(window1);
-					JLabel window2 = new JLabel("Двухстворчатое окно"); // Отображение текста или изображения
+					JLabel window2 = new JLabel("Two windows"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					window2.setBounds(220,170,150,30);
 					window2.setVisible(false);
 					main_panel.add(window2);
@@ -202,11 +202,11 @@ public class Form {
 					inputW2.setBounds(220, 195, 30, 23);
 					inputW2.setVisible(false);
 					main_panel.add(inputW2);
-					JLabel window3 = new JLabel("Трехстворчатое окно"); // Отображение текста или изображения
+					JLabel window3 = new JLabel("Three Window"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					window3.setBounds(60,320,150,30);
 					window3.setVisible(false);
 					main_panel.add(window3);
-					JLabel window4 = new JLabel("Оконный блок"); // Отображение текста или изображения
+					JLabel window4 = new JLabel("Window Block"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					window4.setBounds(220,320,150,30);
 					window4.setVisible(false);
 					main_panel.add(window4);
@@ -221,32 +221,32 @@ public class Form {
 					JTextField input_san = new JTextField("0");
 					input_san.setBounds(190, 195, 30, 23);
 					main_panel.add(input_san);
-					JLabel window33 = new JLabel("Площадь окон"); // Отображение текста или изображения
+					JLabel window33 = new JLabel("Square windows"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					window33.setBounds(40,170,150,30);
 					window33.setVisible(false);
 					main_panel.add(window33);
-					JLabel service2 = new JLabel("чистка сан-узла"); // Отображение текста или изображения
+					JLabel service2 = new JLabel("Clean toilet"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					service2.setBounds(40,190,150,30);
 					main_panel.add(service2);
-					JCheckBox point3 = new JCheckBox("Пункт 3");
+					JCheckBox point3 = new JCheckBox("пїЅпїЅпїЅпїЅпїЅ 3");
 					point3.setBounds(160, 195, 20, 20);
 					main_panel.add(point3);
-					JLabel service1 = new JLabel("Химчистка мебели"); // Отображение текста или изображения
+					JLabel service1 = new JLabel("Clean furniture"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					service1.setBounds(40,150,150,30);
 					main_panel.add(service1);
-					JCheckBox point33 = new JCheckBox("Пункт 3.1");
+					JCheckBox point33 = new JCheckBox("пїЅпїЅпїЅпїЅпїЅ 3.1");
 					point33.setBounds(160, 155, 20, 20);
 					main_panel.add(point33);
-					JLabel promo = new JLabel("Ввести промокод:"); // Отображение текста или изображения
+					JLabel promo = new JLabel("Enter promo:"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					promo.setBounds(40,240,150,30);
 					main_panel.add(promo);
-					JButton button_exit = new JButton("Выход"); // добавляем кнопку
+					JButton button_exit = new JButton("Exit"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 					button_exit.setBounds(270,290,100,40);
 					main_panel.add(button_exit);
 					JTextField inputpromo = new JTextField("");
 					inputpromo.setBounds(150, 243, 100, 23);
 					main_panel.add(inputpromo);
-					JButton raschet = new JButton("Рассчитать стоимость"); // добавляем кнопку
+					JButton raschet = new JButton("calculate"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 					raschet.setBounds(40,290,180,40);
 					main_panel.add(raschet);
 					po1.setVisible(false);
@@ -255,19 +255,19 @@ public class Form {
 				 main_panel.add(win1);
 				 
 				 
-				 	JButton button_create = new JButton("Create PDF"); // добавляем кнопку
+				 	JButton button_create = new JButton("Create PDF"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 				 	button_create.setBounds(270,240,100,35);
-				 	ActionListener actionCreate = new ListenerCreate(); //создаем слушатель для кнопки PDF
-					button_create.addActionListener(actionCreate); // добавляем слушатель к кнопке
+				 	ActionListener actionCreate = new ListenerCreate(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ PDF
+					button_create.addActionListener(actionCreate); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 				 	main_panel.add(button_create);
 
-					String[] type = {"генеральная", "после ремонта","ежедневная"};
+					String[] type = {"General", "after repair","daily"};
 					JComboBox box = new JComboBox(type);
 						box.setBounds(120, 45, 130, 30);
 						box.setVisible(true);
 						main_panel.add(box);
-						ActionListener actionListener1 = new Event(); //создаем слушатель
-				    	button_exit.addActionListener(actionListener1); // добавляем слушатель к кнопке
+						ActionListener actionListener1 = new Event(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+				    	button_exit.addActionListener(actionListener1); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
 					galochka.addActionListener(new ActionListener() {
 						public  void actionPerformed(ActionEvent actionEvent) {
@@ -340,12 +340,12 @@ public class Form {
 					});
 
 
-					raschet.addActionListener(new ActionListener() // слушатель
+					raschet.addActionListener(new ActionListener() // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					    	{
 			    		
 								@Override
 					 public void actionPerformed(ActionEvent e) {
-			         	if (box.getSelectedIndex() == 0) { // если выбрана генеральная
+			         	if (box.getSelectedIndex() == 0) { // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			         		Raschet rasch = new Raschet();
 			         		rasch.setSquare(input.getText()); 
 			         		rasch.setW1(inputW1.getText());
@@ -384,9 +384,9 @@ public class Form {
 					 }
 				});	
 					}
-				else if (log.getText().equals(h) && pas.getText().equals(j)){            //условие для входа админа
+				else if (log.getText().equals(h) && pas.getText().equals(j)){            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 					
-					main_GUI2.setTitle("Калькулятор клининговых услуг");				//Создание админской формы
+					main_GUI2.setTitle("calculate of cleaning services");				//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 					main_GUI2.setBounds(400,200,400,350);
 					main_GUI2.setResizable(false);
 					main_GUI2.setVisible(true);
@@ -395,65 +395,65 @@ public class Form {
 					main_GUI2.add(main_panel2);
 					
 				    JFrame1.dispose();    
-				    JButton button_exit = new JButton("Выход"); // добавляем кнопку
+				    JButton button_exit = new JButton("Exit"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 					button_exit.setBounds(270,240,100,40);
 					main_panel2.add(button_exit);
 					main_GUI2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-					ActionListener actionListener1 = new Event(); //создаем слушатель
-			    	button_exit.addActionListener(actionListener1); // добавляем слушатель к кнопке
+					ActionListener actionListener1 = new Event(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+			    	button_exit.addActionListener(actionListener1); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 			    	
-					JLabel promo2 = new JLabel("Новый промокод:"); // Отображение текста или изображения	
+					JLabel promo2 = new JLabel("New promo:"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ	
 					promo2.setBounds(40,200,150,30);			
 					main_panel2.add(promo2);				
 					
-					inputpromo2 = new JTextField("");			// 	ПОЛЕ ВВОДА НОВОГО ПРОМОКОДА	
+					inputpromo2 = new JTextField("");			// 	пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ	
 					inputpromo2.setBounds(150, 203, 100, 23);
 					main_panel2.add(inputpromo2);	
 					
 
-					JLabel sk = new JLabel("Сумма скидки:"); // Отображение текста или изображения	
+					JLabel sk = new JLabel("sum discont:"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ	
 					sk.setBounds(40,240,150,30);			
 					main_panel2.add(sk);				
 					
-					sk_field = new JTextField("");			// 	ПОЛЕ ВВОДА НОВОГО ПРОМОКОДА	
+					sk_field = new JTextField("");			// 	пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ	
 					sk_field.setBounds(150, 243, 100, 23);
 					main_panel2.add(sk_field);	
 					
-					 JButton ok = new JButton("Применить"); // добавляем кнопку
+					 JButton ok = new JButton("apply"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 					 ok.setBounds(270,200,100,40);
 					 main_panel2.add(ok);
 					 
-					 ActionListener actionListener_ok = new Apply(); //создаем слушатель
-				    	button_exit.addActionListener(actionListener_ok); // добавляем слушатель к кнопке
+					 ActionListener actionListener_ok = new Apply(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+				    	button_exit.addActionListener(actionListener_ok); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 				}		
 			}
 			
 	});
 	
 	
-	label(auth); // Размещение надписей 
+	label(auth); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
 	JFrame1.add(auth);
 	JFrame1.setVisible(true);
-	JFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие окна JFrame и процесса Java
+	JFrame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ JFrame пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Java
 	
 	auth.add(but_login);
     	
 		
 	}
-	void label(JPanel panel) throws FileNotFoundException {																		// ПАНЕЛЬ АВТОРИЗАЦИИ
+	void label(JPanel panel) throws FileNotFoundException {																		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		
-		 // создание текстового поля
-       log.setBounds(100,105,200,30); // параметры текстового поля ( его положение на панели относительно x,y;ширину, длину)
-       panel.add(log); // Добавление текстового поля на панель
-       JLabel laba_log = new JLabel("Введите логин");
+		 // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+       log.setBounds(100,105,200,30); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ ( пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ x,y;пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ)
+       panel.add(log); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+       JLabel laba_log = new JLabel("elogin");
        laba_log.setBounds(100,80,300,30);
        panel.add(laba_log);
 
-       JLabel laba_pass = new JLabel("Введите пароль");
+       JLabel laba_pass = new JLabel("enter password");
        laba_pass.setBounds(100,130,300,30);
        panel.add(laba_pass);
-       pas.setBounds(100,155,200,30); //  параметры текстового поля ( его положение на панели относительно x,y;ширину, длину)
-       panel.add(pas); // Добавление текстового поля на панель
+       pas.setBounds(100,155,200,30); //  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ ( пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ x,y;пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ)
+       panel.add(pas); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	
    }	
 								

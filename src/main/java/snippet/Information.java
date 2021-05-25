@@ -13,7 +13,7 @@ public static String name = "Состав команды:";
 public void actionPerformed(ActionEvent e) {
 
 JFrame inf_Frame = new JFrame("Main"); // создание графического окна
-inf_Frame.setTitle ("Информация");
+inf_Frame.setTitle ("Info");
 inf_Frame.setBounds(150,120,400,300);
 inf_Frame.setResizable(false); // фиксированный размер окна
 
